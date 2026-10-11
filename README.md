@@ -32,25 +32,25 @@ custom domain root.
 | Logo and photos | `assets/` (see [ASSETS.md](ASSETS.md)) |
 | Copy, hours, contact, reviews | `index.html` |
 | Colours and type | Tokens at the top of `css/styles.css` |
-| Fonts | `fonts/` (Fraunces and Figtree, self-hosted, SIL Open Font License) |
+| Fonts | `fonts/` (Cormorant Garamond and Roboto, self-hosted, SIL Open Font License) |
 
 ### Refreshing the venue's data
 
 ```bash
-./scripts/fetch-assets.sh        # logo, hero, gallery and dish photos into assets/
+./scripts/fetch-assets.sh        # logo, hero, gallery and dish photos into assets/ (logo step needs Pillow)
 python3 scripts/fetch-menu.py    # their Flipdish menu, cleaned, into data/menu.json
 ```
 
-Both only need running once. `data/menu.json` is currently built from a fallback list because the Flipdish
-menu couldn't be fetched. `fetch-menu.py` follows Flipdish's published menu format but hasn't been run against
-the live file yet, so check its output before committing.
+Both only need running once. `data/menu.json` is a cleaned copy of their live Flipdish menu: 71 dishes in
+11 sections with descriptions and allergens, and 176 drinks in 8 groups. The script sentence-cases the
+descriptions, splits out "Contains ..." allergen lines and fixes a few obvious typos in the source (listed in
+`FIXES`).
 
 ## Still to confirm
 
 Search the code for `TODO`.
 
-- Photos and logo not yet downloaded or viewed (see ASSETS.md).
-- Signature dish descriptions were written from the dish names. Replace them with the venue's own wording.
 - Outdoor seating, wheelchair access and dog-friendly come from their TableAgent listing. Confirm with the owner.
-- Barbara's and Kevin's reviews from their current site need adding word for word.
-- Drinks: wine bottle names, the 22 cocktails, juice names and drink prices arrive with the full menu data.
+- "Fresh mint lemonade: guests call it the best in London" is from the brief's summary of their reviews.
+  Find the review and quote it, or confirm the line with the owner.
+- The gallery photos look like stock photography (see ASSETS.md). New photos of the room and the bar would help.

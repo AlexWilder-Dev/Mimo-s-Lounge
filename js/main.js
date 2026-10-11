@@ -19,19 +19,21 @@
     img.addEventListener('error', () => onMissing(img), { once: true });
   }
 
-  /* ---------- Missing photos fall back to a styled panel ---------- */
-  $$('[data-media] img').forEach((img) =>
-    watchImage(img, () => img.closest('[data-media]').classList.add('is-missing')),
-  );
-  const brand = $('[data-brand]');
-  const logo = brand && $('.brand-logo', brand);
-  if (logo) watchImage(logo, () => brand.classList.add('is-missing'));
-
   /* ---------- Header ---------- */
   const header = $('[data-header]');
   const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  // The hero shows the full logo badge; the header wordmark appears once the badge scrolls away.
+  const heroBadge = $('[data-hero-badge]');
+  if (heroBadge && 'IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => header.classList.toggle('show-brand', !entry.isIntersecting), {
+      rootMargin: '-80px 0px 0px 0px',
+    }).observe(heroBadge);
+  } else {
+    header.classList.add('show-brand');
+  }
 
   // Highlight the nav link for the section in the middle of the screen.
   const navLinks = $$('[data-nav]');
@@ -119,7 +121,7 @@
   function pricesHTML(prices) {
     const list = (prices || []).filter((p) => typeof p.amount === 'number');
     if (!list.length) return '';
-    return `<div class="mi-prices">${list
+    return `<div class="mi-prices${list.length > 2 ? ' is-row' : ''}">${list
       .map(
         (p) =>
           `<span class="mi-price">${p.label ? `<span class="mi-price-label">${esc(p.label)}</span>` : ''}${money(p.amount)}</span>`,
@@ -129,7 +131,8 @@
 
   function allergenText(value) {
     if (!value) return '';
-    return Array.isArray(value) ? value.join(', ') : String(value);
+    const text = Array.isArray(value) ? value.join(', ') : String(value);
+    return text.charAt(0).toLowerCase() + text.slice(1);
   }
 
   function menuItemHTML(item) {
@@ -139,7 +142,7 @@
         <p class="mi-name">${esc(item.name)}${item.veg ? ' <abbr class="tag-v" title="Vegetarian">V</abbr>' : ''}</p>
         ${item.note ? `<p class="mi-note">${esc(item.note)}</p>` : ''}
         ${item.description ? `<p class="mi-desc">${esc(item.description)}</p>` : ''}
-        ${allergens ? `<p class="mi-allergens"><strong>Allergens:</strong> ${esc(allergens)}</p>` : ''}
+        ${allergens ? `<p class="mi-allergens">Contains ${esc(allergens)}</p>` : ''}
       </div>
       ${pricesHTML(item.prices)}
     </li>`;
@@ -273,7 +276,8 @@
     (s.items || []).length + (s.groups || []).reduce((n, g) => n + (g.items || []).length, 0);
 
   function drinkItemHTML(item) {
-    return `<li class="drink-item">
+    const sizes = (item.prices || []).length > 2; // 25ml / 50ml / 70cl go on their own line
+    return `<li class="drink-item${sizes ? ' has-sizes' : ''}">
       <div>
         <p class="drink-item-name">${esc(item.name)}</p>
         ${item.description ? `<p class="drink-item-desc">${esc(item.description)}</p>` : ''}
@@ -286,62 +290,55 @@
     const items = section.items || [];
     const groups = (section.groups || []).filter((g) => g.items && g.items.length);
     const n = drinkCount(section);
-    const detailed = [...items, ...groups.flatMap((g) => g.items)].some(
-      (item) => item.description || (item.prices && item.prices.length),
-    );
 
-    // Short, name-only lists read better on one line than behind a toggle.
-    if (!n || (!detailed && !groups.length && n <= 3)) {
-      let meta = items.map((item) => item.name).join(' · ');
-      if (!n && section.groups && section.groups.length) meta = section.groups.map((g) => g.name).join(' · ');
-      else if (!n && section.count) meta = `${section.count} on the list`;
-      return `<div class="drink-group drink-row">
-        <span class="drink-name">${esc(section.name)}</span>
-        <span class="drink-meta">${esc(meta)}</span>
-      </div>`;
+    // Nothing listed yet: show the name and whatever summary we have, without a toggle.
+    if (!n) {
+      const meta = section.groups && section.groups.length ? section.groups.map((g) => g.name).join(' · ') : section.count ? `${section.count} on the list` : '';
+      return `<div class="drink-group"><p class="drink-row"><span class="drink-name">${esc(section.name)}</span><span class="drink-meta">${esc(meta)}</span></p></div>`;
     }
 
     const list = (arr) => `<ul class="drink-items" role="list">${arr.map(drinkItemHTML).join('')}</ul>`;
     return `<details class="drink-group">
       <summary>
         <span class="drink-name">${esc(section.name)}</span>
-        <span class="drink-meta">${n}</span>
+        <span class="drink-meta">${n} ${n === 1 ? 'drink' : 'drinks'}</span>
         <svg class="icon drink-chevron" aria-hidden="true"><use href="#i-down"/></svg>
       </summary>
       <div class="drink-body">
         ${section.note ? `<p class="drink-note">${esc(section.note)}</p>` : ''}
         ${items.length ? list(items) : ''}
-        ${groups.map((g) => `<p class="drink-subhead">${esc(g.name)}</p>${list(g.items)}`).join('')}
+        ${groups
+          .map((g) => `<p class="drink-subhead">${esc(g.name)}${g.note ? ` <span>${esc(g.note)}</span>` : ''}</p>${list(g.items)}`)
+          .join('')}
       </div>
     </details>`;
   }
 
   function renderDrinks(sections) {
     const root = $('[data-drinks]');
-    if (!root) return;
-    root.innerHTML = sections.map(drinkSectionHTML).join('');
+    if (root) root.innerHTML = sections.map(drinkSectionHTML).join('');
 
-    // Named bottles on the wine tile, grouped by red / white / rosé.
-    const wineGroups = sections
-      .filter((s) => /wine/i.test(`${s.id} ${s.name}`))
-      .flatMap((s) => (s.groups && s.groups.length ? s.groups : [{ name: s.name, items: s.items || [] }]))
-      .filter((g) => g.items && g.items.length);
-    const bottles = $('[data-wine-bottles]');
-    if (bottles && wineGroups.length) {
-      bottles.innerHTML = wineGroups
+    // Lebanese bottles by colour, for the wine panel.
+    const wine = sections.find((s) => s.id === 'lebanese-wine');
+    const wineList = $('[data-wine-list]');
+    const bottles = wine ? (wine.groups || []).filter((g) => g.items.length && g.name !== 'House') : [];
+    if (wineList && bottles.length) {
+      wineList.innerHTML = bottles
         .map(
           (g) => `<div>
             <p class="wine-type">${esc(g.name)}</p>
-            <p class="wine-names">${g.items.map((item) => esc(item.name)).join(' · ')}</p>
+            ${g.items
+              .map((item) => {
+                const price = (item.prices || [])[0];
+                return `<p class="wine-bottle"><span>${esc(item.name)}</span><span>${price ? money(price.amount) : ''}</span></p>`;
+              })
+              .join('')}
           </div>`,
         )
         .join('');
-      bottles.hidden = false;
+    } else if (wineList) {
+      wineList.closest('.wine').hidden = true;
     }
-
-    const cocktails = sections.find((s) => /cocktail/i.test(`${s.id} ${s.name}`));
-    const count = cocktails && (drinkCount(cocktails) || cocktails.count);
-    if (count) $$('[data-cocktail-count]').forEach((el) => (el.textContent = String(count)));
   }
 
   async function loadMenu() {
@@ -352,6 +349,8 @@
       const data = await res.json();
       renderMenu(data.food || []);
       renderDrinks(data.drinks || []);
+      const dishes = (data.food || []).reduce((n, section) => n + (section.items || []).length, 0);
+      if (dishes) $$('[data-dish-count]').forEach((el) => (el.textContent = String(dishes)));
     } catch (err) {
       if (status) {
         status.innerHTML =
@@ -368,6 +367,7 @@
     const dialog = section && $('[data-lightbox]', section);
     if (!dialog) return;
     const img = $('[data-lb-img]', dialog);
+    const caption = $('[data-lb-alt]', dialog);
     const counter = $('[data-lb-count]', dialog);
     const prev = $('[data-lb-prev]', dialog);
     const next = $('[data-lb-next]', dialog);
@@ -385,14 +385,7 @@
       refresh();
     };
 
-    // Thumbnails are lazy, so check up front which photos exist to avoid tiles vanishing mid-scroll.
-    items.forEach((btn) => {
-      const thumb = $('img', btn);
-      watchImage(thumb, () => btn.isConnected && drop(btn));
-      fetch(thumb.getAttribute('src'), { method: 'HEAD' })
-        .then((res) => !res.ok && btn.isConnected && drop(btn))
-        .catch(() => {});
-    });
+    items.forEach((btn) => watchImage($('img', btn), () => btn.isConnected && drop(btn)));
     refresh();
 
     function show(i) {
@@ -400,6 +393,7 @@
       const btn = items[index];
       img.src = btn.dataset.full;
       img.alt = $('img', btn).alt;
+      if (caption) caption.textContent = img.alt;
       counter.textContent = `${index + 1} / ${items.length}`;
     }
     // Fall back to the thumbnail if the full-size file is missing.

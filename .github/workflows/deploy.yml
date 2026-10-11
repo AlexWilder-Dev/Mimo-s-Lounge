@@ -22,7 +22,7 @@ jobs:
       - name: Collect the site files
         run: |
           mkdir _site
-          cp -r index.html favicon.svg css js data fonts _site/
+          cp -r index.html favicon.png apple-touch-icon.png css js data fonts _site/
           if [ -d assets ]; then cp -r assets _site/; fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4

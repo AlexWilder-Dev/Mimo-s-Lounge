@@ -1,65 +1,66 @@
 # Assets: Mimo's Lounge, Bar & Grill
 
-**Status: not downloaded yet.** The build environment's network policy blocked `flipdish.imgix.net`
-(and `menus.flipdish.co` and `www.mimoslounge.co.uk`), so none of these files could be fetched or looked at.
-The "What it shows" column is left blank on purpose rather than guessed.
+Everything here comes from the image CDN behind the venue's current site (`https://flipdish.imgix.net/`).
+`./scripts/fetch-assets.sh` re-downloads the lot.
 
-Run `./scripts/fetch-assets.sh` on a machine with normal internet access. It writes every file below to the
-right path, and the site picks them up with no code changes. Until then, dish photos show a warm gradient panel,
-the header and footer use a text wordmark, the hero uses its red-and-ember gradient, and the gallery section hides itself.
+## Logo
 
-All sources are on `https://flipdish.imgix.net/`.
-
-## Logo and hero
-
-| File | Source | Used in | What it shows |
+| File | Source | What it shows | Used in |
 | --- | --- | --- | --- |
-| `assets/logo.png` | `YlBiHS4JHW2PoOl8uNX0V5Nuw.png?h=400` | Header (light background) | _Not viewed yet_ |
-| `assets/hero.jpg` | `GsPB0BPVjKpGl1ym2mIQ5y4OArY.jpg?w=2000` | Hero background, desktop | _Not viewed yet_ |
-| `assets/hero-1000.jpg` | same photo, `?w=1000` | Hero background, phones | (same photo) |
+| `assets/logo.jpg` | `YlBiHS4JHW2PoOl8uNX0V5Nuw.png?h=400` | Calligraphic script "Mimo's" with "Lounge, Bar & Grill" in Roboto underneath, on a grey (#949ea8) dry-brush circle. Served as a JPEG on white despite the .png name. | Reference only |
+| `assets/logo-badge.webp` | same logo at 1600px, via `scripts/make-logo.py` | The badge with the white background removed | Hero, footer, favicon |
+| `assets/logo-wordmark.webp` | same, via `scripts/make-logo.py` | Just the lettering, recoloured cream for dark backgrounds | Header (appears once the hero badge scrolls away) |
+
+## Hero
+
+| File | Source | What it shows | Used in |
+| --- | --- | --- | --- |
+| `assets/hero.jpg`, `hero-1000.jpg` | `GsPB0BPVjKpGl1ym2mIQ5y4OArY.jpg` | The dining room under red lighting: dark wood tables set with black plates, folded red napkins and wine glasses, the bar at the back with lit bottle shelves, string lights and stools. | Hero (whole room); Bar section (cropped to the bar) |
+
+## Dish photos (the venue's own phone photos, taken in the restaurant)
+
+All ten mappings checked by eye.
+
+| File | Dish | What it shows | Used in |
+| --- | --- | --- | --- |
+| `dishes/mixed-grill.jpg` | Mixed Grill | Kafta and lamb skewers, shish taouk, vermicelli rice, salad with pomegranate and a pot of garlic sauce on a black plate | Grill band |
+| `dishes/farrouj-meshwi.jpg` | Farrouj Meshwi | Charred, charcoal-grilled chicken with rice dusted with sumac, salad and lemon | Grill band |
+| `dishes/chicken-chawarma.jpg` | Chicken Chawarma | Chicken chawarma over rice and salad on a black plate on the bar counter, with garlic and chilli sauce pots | Grill band |
+| `dishes/veg-mezze.jpg` | Vegetarian Selection of Mezze | A takeaway tray: vine leaves, green beans, falafel, fatayer, hoummos, pomegranate and lemon | Mezze grid |
+| `dishes/fatayer.jpg` | Fatayer | Four triangular baked pastries with a lemon slice on a black plate | Mezze grid |
+| `dishes/falafel.jpg` | Falafel | Four sesame-crusted falafel with salad and pickles, and a bowl of tahini | Mezze grid |
+| `dishes/jawaneh.jpg` | Jawaneh | Grilled chicken wings with lettuce, tomato, lemon and garlic sauce with mint | Mezze grid |
+| `dishes/arayess.jpg` | Arayess | Grilled flatbread wedges stuffed with minced lamb, pickles, cabbage and tomato | Mezze grid |
+| `dishes/spicy-potatoes.jpg` | Spicy Potatoes | Cubed potatoes with coriander and chilli in a black bowl, lemon wedge | Mezze grid |
+| `dishes/grilled-halloumi.jpg` | Grilled Halloumi | Grilled halloumi slices with cucumber, tomato, mint and sumac | Mezze grid |
 
 ## Gallery (lightbox opens the 1400px file; the grid uses the 700px copy)
 
-| File | Source | Used in | What it shows |
+These look like stock or studio photography rather than shots taken at Mimo's: white seamless
+backgrounds, slate boards, silver platters. They are what the venue's own site uses, so they're kept,
+but the design leans on the venue's own photos above.
+
+| File | Source | What it shows | Used in |
 | --- | --- | --- | --- |
-| `assets/gallery/gallery-1.jpg` | `rCLgANDMnKvEYPqfhu8w4sNvU.jpg?w=1400` | Gallery, large tile | _Not viewed yet_ |
-| `assets/gallery/gallery-2.jpg` | `8J8UlU8WNLeGHiA0LBeVLRZNc.jpg?w=1400` | Gallery | _Not viewed yet_ |
-| `assets/gallery/gallery-3.jpg` | `wgu17xBLjNUw2YsGKRUdoTSwZEo.jpg?w=1400` | Gallery | _Not viewed yet_ |
-| `assets/gallery/gallery-4.jpg` | `fEFqLj0J8103huztYvqLKzhf64I.jpg?w=1400` | Gallery | _Not viewed yet_ |
-| `assets/gallery/gallery-5.jpg` | `XRbeDuvS7Z8MJYhmdZgJiOqU.jpg?w=1400` | Gallery | _Not viewed yet_ |
-| `assets/gallery/gallery-6.jpg` | `GkNKyHpCYx2pwlAX2yBKCkSBnuo.jpg?w=1400` | Gallery, wide tile | _Not viewed yet_ |
-| `assets/gallery/gallery-7.jpg` | `vnFu1rXoROlV3B8RsfiqvXGPIU.jpg?w=1400` | Gallery, wide tile | _Not viewed yet_ |
+| `gallery/gallery-1.jpg` | `rCLgANDMnKvEYPqfhu8w4sNvU.jpg` | Lamb shawarma in pitta with tahini, pickled peppers, grilled tomato and parsley, on white | Gallery |
+| `gallery/gallery-2.jpg` | `8J8UlU8WNLeGHiA0LBeVLRZNc.jpg` | Okra and lamb stew (bamieh) in a gold-rimmed bowl with saffron rice, on a wooden table | Gallery |
+| `gallery/gallery-3.jpg` | `wgu17xBLjNUw2YsGKRUdoTSwZEo.jpg` | Overhead spread on slate: kafta skewers, tabbouleh, pastries, pitta, olives, dips, figs and pomegranate on silver platters | Gallery |
+| `gallery/gallery-4.jpg` | `fEFqLj0J8103huztYvqLKzhf64I.jpg` | Fattoush in a grey bowl with toasted pitta, romaine and sumac | Gallery |
+| `gallery/gallery-5.jpg` | `XRbeDuvS7Z8MJYhmdZgJiOqU.jpg` | Mezze in terracotta bowls on a wooden table: hoummos, moutabbal, labneh, olives and pickles, stuffed pastries, basterma | Gallery; Groups section |
+| `gallery/gallery-6.jpg` | `GkNKyHpCYx2pwlAX2yBKCkSBnuo.jpg` | Chicken shish taouk skewers with spinach, rocket and chard on a dark plate, cucumber salad | Gallery |
+| `gallery/gallery-7.jpg` | `vnFu1rXoROlV3B8RsfiqvXGPIU.jpg` | Shankleesh: a chilli-coated cheese ball with mint, crumbled, in olive oil | Gallery |
 
-## Dish photos (`?w=1000`)
+Not used: the testimonials background on their site (`t2a24GHQrfRK7FLR6Peg58dzk.jpg`) is a generic
+stock café interior, not Mimo's.
 
-| File | Source | Dish | Mapping | Used in | What it shows |
-| --- | --- | --- | --- | --- | --- |
-| `assets/dishes/veg-mezze.jpg` | `SsBMNTTqkdPuoVBPsOVQ41UJUcA.jpg` | Vegetarian Selection of Mezze | From their menu data | Signature dishes, feature card | _Not viewed yet_ |
-| `assets/dishes/mixed-grill.jpg` | `5FiNcI0kpYmGmJU1SToaKbN10sY.jpg` | Mixed Grill | From their menu data | Off the grill | _Not viewed yet_ |
-| `assets/dishes/chicken-chawarma.jpg` | `nzpBjSNlWDgs9OfchumCf4NL1A.jpg` | Chicken Chawarma | From their menu data | Off the grill | _Not viewed yet_ |
-| `assets/dishes/farrouj-meshwi.jpg` | `YNFHd8MFudBluSd0tOzp7mLJPA.jpg` | Farrouj Meshwi | From their menu data | Off the grill | _Not viewed yet_ |
-| `assets/dishes/fatayer.jpg` | `KPnlfjddgQfaSwJ2m1EEUEIJeA.jpg` | Fatayer | From their menu data | Hot mezze | _Not viewed yet_ |
-| `assets/dishes/falafel.jpg` | `OAWvhRhKnfvAT2xyJfskfXHeo.jpg` | Falafel | From their menu data | Hot mezze | _Not viewed yet_ |
-| `assets/dishes/jawaneh.jpg` | `fz21sFZcyGjSS4Y1HGcXLokMM5I.jpg` | Jawaneh | **Inferred from page order** | Hot mezze | _Not viewed yet_ |
-| `assets/dishes/arayess.jpg` | `2b3bHfqn3l8cV285g17RcwJclD8.jpg` | Arayess | **Inferred from page order** | Hot mezze | _Not viewed yet_ |
-| `assets/dishes/spicy-potatoes.jpg` | `2xdO9z6xWZGEhIs6aAWyqO8TXqI.jpg` | Spicy Potatoes | **Inferred from page order** | Hot mezze | _Not viewed yet_ |
-| `assets/dishes/grilled-halloumi.jpg` | `rRqBW4TVo8QrvXpISDIcatmwQ.jpg` | Grilled Halloumi | **Inferred from page order** | Hot mezze | _Not viewed yet_ |
+## How the photos shaped the design
 
-## What the design used in place of looking
-
-The venue's own image colour data (from the brief), not the photos themselves:
-
-- Logo: charcoal `#1f1b1a` with cool greys. A dark logo needs a light header, so the header is warm off-white.
-- Hero: dark and red-dominant, deep red `#770518` / `#ae0b10`, ember `#fbac73`.
-- Food: saffron/amber `#d69b1c` to `#e09123`, warm browns, herb green.
-
-## Once the photos are in
-
-1. Fill in "What it shows" for every row above.
-2. Check the four inferred dish mappings and swap files if any are wrong.
-3. Check the logo in the header. If it also works reversed out, it can replace the text wordmark in the footer.
-4. Write alt text for the hero and gallery photos (marked `TODO` in `index.html`).
-5. Check the colour tokens at the top of `css/styles.css` against the photos and adjust.
-6. Check the type (Fraunces + Figtree) against the logo's letterforms.
-7. Note any real interior materials, lighting, tableware or pattern in the photos. Those are the only motifs
-   the design should borrow. If one shows the bar or lounge, use it in the Bar section.
+- **The room is dark and red-lit**, and the dish photos were taken in it. The site is a dark lounge
+  (#120c0c night, deep reds #770518 / #c8141c) so the photos sit in their own light instead of fighting a cream page.
+- **Ember (#fbac73) and amber (#e09123)** come from the warm bulbs over the bar and the food's saffron tones,
+  and are used for prices, accents and the grill band's embers.
+- **The logo's grey (#949ea8)** is used for small labels.
+- **Type:** the logo pairs a pointed-pen script with Roboto. Headings are Cormorant Garamond (high contrast,
+  calligraphic stress, sits beside the script without imitating it). Body text is Roboto, the logo's own sans.
+- **The one motif borrowed** is the string of small warm bulbs over their bar, used as a tiny divider beside
+  section labels. The menu is shown as a cream card on the dark page, like a menu on a table.

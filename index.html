@@ -7,16 +7,18 @@
   <meta name="description" content="Authentic Lebanese food on Tooting High Street: mezze, charcoal grill and a lounge bar. Book a table or order online and get 20% off your first order.">
   <!-- Speculative demo: keep it out of search results until the venue signs off. -->
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#f8f2ea">
-  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#120c0c">
+  <meta name="color-scheme" content="dark">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Mimo's Lounge, Bar &amp; Grill">
   <meta property="og:title" content="Mimo's Lounge, Bar &amp; Grill · Tooting">
   <meta property="og:description" content="Mezze, charcoal grill and a lounge bar on Tooting High Street.">
   <meta property="og:locale" content="en_GB">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preload" href="fonts/fraunces-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/roboto-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/hero-1000.jpg" as="image" media="(max-width: 1000px)">
   <link rel="stylesheet" href="css/styles.css">
   <script>document.documentElement.classList.add('js')</script>
   <script src="js/main.js" defer></script>
@@ -51,28 +53,25 @@
 
   <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z" fill="currentColor"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.6 4.2-2 1.3a11 11 0 0 0 5.9 5.9l1.3-2 4.2 1.6v3a2 2 0 0 1-2.1 2A16.5 16.5 0 0 1 4.5 5.6a2 2 0 0 1 2-2.1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="6" cy="16.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="16.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 16.5l4-7h5l3 7M10 9.5L8.5 6H6M15 9.5l-1-3h2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 19.5c.6-3.3 3-5.2 6-5.2s5.4 1.9 6 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16.5" cy="8.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16.8 13.6c2.3.2 3.8 1.9 4.2 4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="i-platter" viewBox="0 0 24 24"><path d="M3 11.5h18a9 9 0 0 1-18 0z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 7.5c0-1.2 1-1.6 1-2.8M13.5 7.5c0-1.2 1-1.6 1-2.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="i-access" viewBox="0 0 24 24"><circle cx="11" cy="4.5" r="1.9" fill="currentColor"/><path d="M11 8v6h5.5l2 5M11 10.5h4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.2 11.4a5 5 0 1 0 7 6.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.6 4.2-2 1.3a11 11 0 0 0 5.9 5.9l1.3-2 4.2 1.6v3a2 2 0 0 1-2.1 2A16.5 16.5 0 0 1 4.5 5.6a2 2 0 0 1 2-2.1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 19.5c.6-3.3 3-5.2 6-5.2s5.4 1.9 6 5.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="16.5" cy="8.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16.8 13.6c2.3.2 3.8 1.9 4.2 4.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-platter" viewBox="0 0 24 24"><path d="M3 11.5h18a9 9 0 0 1-18 0z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 7.5c0-1.2 1-1.6 1-2.8M13.5 7.5c0-1.2 1-1.6 1-2.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-access" viewBox="0 0 24 24"><circle cx="11" cy="4.5" r="1.9" fill="currentColor"/><path d="M11 8v6h5.5l2 5M11 10.5h4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.2 11.4a5 5 0 1 0 7 6.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
     <symbol id="i-paw" viewBox="0 0 24 24"><ellipse cx="12" cy="16" rx="4.3" ry="3.6" fill="currentColor"/><ellipse cx="6.3" cy="10.8" rx="1.8" ry="2.3" fill="currentColor"/><ellipse cx="9.6" cy="6.8" rx="1.8" ry="2.4" fill="currentColor"/><ellipse cx="14.4" cy="6.8" rx="1.8" ry="2.4" fill="currentColor"/><ellipse cx="17.7" cy="10.8" rx="1.8" ry="2.3" fill="currentColor"/></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-down" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </svg>
 
   <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="#top" data-brand>
-        <img class="brand-logo" src="assets/logo.png" alt="Mimo's Lounge, Bar &amp; Grill" height="48">
-        <span class="brand-wordmark" aria-hidden="true">Mimo's<small>Lounge · Bar &amp; Grill</small></span>
+      <a class="brand" href="#top" aria-label="Mimo's Lounge, Bar &amp; Grill, back to top">
+        <img class="brand-mark" src="assets/logo-wordmark.webp" alt="" width="800" height="243">
       </a>
       <nav class="site-nav" aria-label="Main">
         <a href="#menu" data-nav="menu">Menu</a>
@@ -80,23 +79,20 @@
         <a href="#visit" data-nav="visit">Visit</a>
       </nav>
       <div class="header-ctas">
-        <a class="btn btn-outline btn-sm" href="https://www.mimoslounge.co.uk/order" target="_blank" rel="noopener">Order online<span class="vh"> (opens in a new tab)</span></a>
-        <a class="btn btn-primary btn-sm" href="https://tableagent.com/london/mimos-lounge-bar-grill/table-search/" target="_blank" rel="noopener">Book a table<span class="vh"> (opens in a new tab)</span></a>
+        <a class="btn btn-ghost btn-sm" href="https://www.mimoslounge.co.uk/order" target="_blank" rel="noopener">Order online<span class="vh"> (opens in a new tab)</span></a>
+        <a class="btn btn-red btn-sm" href="https://tableagent.com/london/mimos-lounge-bar-grill/table-search/" target="_blank" rel="noopener">Book a table<span class="vh"> (opens in a new tab)</span></a>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <!-- 1. Hero -->
+    <!-- Hero -->
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <!-- TODO: add alt text once the hero photo has been viewed. Treated as decorative until then. -->
-      <figure class="hero-media" data-media>
-        <img src="assets/hero.jpg" srcset="assets/hero-1000.jpg 1000w, assets/hero.jpg 2000w" sizes="100vw" alt="" fetchpriority="high" decoding="async">
-      </figure>
+      <img class="hero-photo" src="assets/hero.jpg" srcset="assets/hero-1000.jpg 1000w, assets/hero.jpg 2000w" sizes="100vw" width="2000" height="1500" alt="Mimo's dining room in red light, tables set with red napkins and the bar at the back" fetchpriority="high" decoding="async">
       <div class="container hero-inner">
-        <p class="kicker kicker-ember">141 Tooting High Street · London SW17</p>
-        <h1 id="hero-title" class="hero-title">Authentic Lebanese Food</h1>
-        <p class="hero-sub">Mezze, a charcoal grill and a lounge bar, on Tooting High Street.</p>
+        <img class="hero-badge" src="assets/logo-badge.webp" width="600" height="599" alt="Mimo's Lounge, Bar &amp; Grill" data-hero-badge>
+        <h1 id="hero-title" class="hero-title">Authentic <em>Lebanese</em> Food</h1>
+        <p class="hero-sub">Mezze, a charcoal grill and a lounge bar on Tooting High Street.</p>
 
         <a class="offer" href="https://www.mimoslounge.co.uk/order" target="_blank" rel="noopener">
           <span class="offer-pct">20%<small>off</small></span>
@@ -106,275 +102,233 @@
         </a>
 
         <div class="hero-ctas">
-          <a class="btn btn-primary btn-lg" href="https://tableagent.com/london/mimos-lounge-bar-grill/table-search/" target="_blank" rel="noopener">Book a table<span class="vh"> (opens in a new tab)</span></a>
-          <a class="btn btn-light btn-lg" href="https://www.mimoslounge.co.uk/order" target="_blank" rel="noopener">Order online<span class="vh"> (opens in a new tab)</span></a>
+          <a class="btn btn-red btn-lg" href="https://tableagent.com/london/mimos-lounge-bar-grill/table-search/" target="_blank" rel="noopener">Book a table<span class="vh"> (opens in a new tab)</span></a>
+          <a class="btn btn-cream btn-lg" href="https://www.mimoslounge.co.uk/order" target="_blank" rel="noopener">Order online<span class="vh"> (opens in a new tab)</span></a>
         </div>
 
-        <ul class="hero-meta">
+        <ul class="hero-meta" role="list">
           <li><span class="stars" aria-hidden="true"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span><strong>4.9</strong> on Google</li>
           <li><span class="status" data-open-status>Open daily 12:00–22:00</span></li>
         </ul>
       </div>
     </section>
 
-    <!-- 3. Signature dishes: mezze -->
-    <!-- TODO: dish descriptions were written for the demo from the dish names (their menu data could not be fetched). Swap in the venue's own wording. -->
-    <section class="section dishes" id="dishes" aria-labelledby="dishes-title">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="kicker">Signature dishes</p>
-          <h2 id="dishes-title">Food that tastes like home</h2>
-          <p class="lede">Mezze for the middle of the table, plates off the charcoal grill, and plenty of it. This is where most tables start.</p>
-        </header>
-
-        <div class="dish-feature reveal">
-          <figure class="dish-media" data-media data-label="Vegetarian Selection of Mezze">
-            <img src="assets/dishes/veg-mezze.jpg" alt="Vegetarian Selection of Mezze" loading="lazy" decoding="async">
-          </figure>
-          <div class="dish-body">
-            <p class="kicker">Platter</p>
-            <h3 class="dish-name">Vegetarian Selection of Mezze <abbr class="tag-v" title="Vegetarian">V</abbr></h3>
-            <p class="dish-desc">A spread of vegetarian mezze, made for sharing round the table.</p>
-            <p class="dish-price">£16</p>
-          </div>
-        </div>
-
-        <h3 class="sub-head reveal">Hot mezze <span>order a few and share</span></h3>
-        <ul class="dish-grid" role="list">
-          <li class="dish reveal">
-            <figure class="dish-media" data-media data-label="Fatayer">
-              <img src="assets/dishes/fatayer.jpg" alt="Fatayer" loading="lazy" decoding="async">
-            </figure>
-            <div class="dish-body">
-              <h4 class="dish-name">Fatayer <abbr class="tag-v" title="Vegetarian">V</abbr></h4>
-              <p class="dish-desc">Baked pastry parcels with a vegetarian filling.</p>
-              <p class="dish-price">£8</p>
-            </div>
-          </li>
-          <li class="dish reveal">
-            <figure class="dish-media" data-media data-label="Falafel">
-              <img src="assets/dishes/falafel.jpg" alt="Falafel" loading="lazy" decoding="async">
-            </figure>
-            <div class="dish-body">
-              <h4 class="dish-name">Falafel <abbr class="tag-v" title="Vegetarian">V</abbr></h4>
-              <p class="dish-desc">Crisp, golden falafel.</p>
-              <p class="dish-price">£6.99</p>
-            </div>
-          </li>
-          <!-- TODO: photo mapping for Jawaneh, Arayess, Spicy Potatoes and Grilled Halloumi was inferred from page order. Check against the photos. -->
-          <li class="dish reveal">
-            <figure class="dish-media" data-media data-label="Jawaneh">
-              <img src="assets/dishes/jawaneh.jpg" alt="Jawaneh" loading="lazy" decoding="async">
-            </figure>
-            <div class="dish-body">
-              <h4 class="dish-name">Jawaneh</h4>
-              <p class="dish-desc">Chicken wings, the Lebanese way.</p>
-              <p class="dish-price"><span class="from">from</span> £6.75</p>
-            </div>
-          </li>
-          <li class="dish reveal">
-            <figure class="dish-media" data-media data-label="Arayess">
-              <img src="assets/dishes/arayess.jpg" alt="Arayess" loading="lazy" decoding="async">
-            </figure>
-            <div class="dish-body">
-              <h4 class="dish-name">Arayess</h4>
-              <p class="dish-desc">Lebanese bread filled with spiced minced meat and toasted until crisp.</p>
-              <p class="dish-price">£9.75</p>
-            </div>
-          </li>
-          <li class="dish reveal">
-            <figure class="dish-media" data-media data-label="Spicy Potatoes">
-              <img src="assets/dishes/spicy-potatoes.jpg" alt="Spicy Potatoes" loading="lazy" decoding="async">
-            </figure>
-            <div class="dish-body">
-              <h4 class="dish-name">Spicy Potatoes <abbr class="tag-v" title="Vegetarian">V</abbr></h4>
-              <p class="dish-desc">Cubed potatoes with chilli, garlic and coriander.</p>
-              <p class="dish-price">£6.75</p>
-            </div>
-          </li>
-          <li class="dish reveal">
-            <figure class="dish-media" data-media data-label="Grilled Halloumi">
-              <img src="assets/dishes/grilled-halloumi.jpg" alt="Grilled Halloumi" loading="lazy" decoding="async">
-            </figure>
-            <div class="dish-body">
-              <h4 class="dish-name">Grilled Halloumi <abbr class="tag-v" title="Vegetarian">V</abbr></h4>
-              <p class="dish-desc">Halloumi, grilled until golden at the edges.</p>
-              <p class="dish-price">£8</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 3b. Signature dishes: the grill -->
+    <!-- Signature dishes: the grill -->
     <section class="grill" id="grill" aria-labelledby="grill-title">
       <canvas class="embers" data-embers aria-hidden="true"></canvas>
       <div class="smoke" aria-hidden="true"></div>
       <div class="container">
         <header class="section-head reveal">
-          <p class="kicker kicker-ember">From the charcoal grill</p>
-          <h2 id="grill-title">Off the grill</h2>
-          <p class="lede">Lamb, kafta, shish taouk and chicken from the BBQ. Every plate comes with chips &amp; salad or rice &amp; salad.</p>
+          <p class="kicker"><span class="bulbs" aria-hidden="true"></span>From the charcoal grill</p>
+          <h2 id="grill-title">Straight off the <em>coals</em></h2>
+          <p class="lede">Lamb, kafta and shish taouk on skewers, and chicken grilled over charcoal. Every BBQ plate comes with chips &amp; salad, or rice &amp; salad.</p>
         </header>
         <ul class="grill-grid" role="list">
-          <li class="grill-card reveal">
-            <figure class="dish-media" data-media data-label="Mixed Grill">
-              <img src="assets/dishes/mixed-grill.jpg" alt="Mixed Grill" loading="lazy" decoding="async">
-            </figure>
+          <li class="dish dish-lg reveal">
+            <figure class="dish-photo"><img src="assets/dishes/mixed-grill.jpg" width="1000" height="1333" loading="lazy" decoding="async" alt="Mixed grill: kafta and lamb skewers, shish taouk, rice, salad and garlic sauce on a black plate"></figure>
             <div class="dish-body">
               <h3 class="dish-name">Mixed Grill</h3>
-              <p class="dish-desc">A mix of skewers from the charcoal grill. Also as a platter with hoummos &amp; tabbouleh.</p>
-              <p class="dish-price"><span class="from">from</span> £19.50</p>
+              <p class="dish-desc">Three skewers: lamb, shish taouk &amp; kafta. Or as a platter with hoummos &amp; tabbouleh.</p>
+              <p class="dish-price"><span class="from">from</span>£19.50</p>
             </div>
           </li>
-          <li class="grill-card reveal">
-            <figure class="dish-media" data-media data-label="Farrouj Meshwi">
-              <img src="assets/dishes/farrouj-meshwi.jpg" alt="Farrouj Meshwi" loading="lazy" decoding="async">
-            </figure>
+          <li class="dish dish-lg reveal">
+            <figure class="dish-photo"><img src="assets/dishes/farrouj-meshwi.jpg" width="1000" height="1114" loading="lazy" decoding="async" alt="Farrouj meshwi: charred, charcoal-grilled chicken with rice, salad and lemon"></figure>
             <div class="dish-body">
               <h3 class="dish-name">Farrouj Meshwi</h3>
-              <p class="dish-desc">Chicken grilled over charcoal.</p>
-              <p class="dish-price"><span class="from">from</span> £17.50</p>
+              <p class="dish-desc">Boneless marinated chicken, charcoal grilled.</p>
+              <p class="dish-price">£17.50</p>
             </div>
           </li>
-          <li class="grill-card reveal">
-            <figure class="dish-media" data-media data-label="Chicken Chawarma">
-              <img src="assets/dishes/chicken-chawarma.jpg" alt="Chicken Chawarma" loading="lazy" decoding="async">
-            </figure>
+          <li class="dish dish-lg reveal">
+            <figure class="dish-photo"><img src="assets/dishes/chicken-chawarma.jpg" width="1000" height="565" loading="lazy" decoding="async" style="object-position: 28% 50%" alt="Chicken chawarma with rice, salad and pots of garlic and chilli sauce on the bar counter"></figure>
             <div class="dish-body">
               <h3 class="dish-name">Chicken Chawarma</h3>
-              <p class="dish-desc">Marinated chicken chawarma. Also as a combo, or on hoummos.</p>
-              <p class="dish-price"><span class="from">from</span> £15.75</p>
+              <p class="dish-desc">Slices of marinated chicken roasted on a skewer.</p>
+              <p class="dish-price"><span class="from">from</span>£15.75</p>
             </div>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- 4. Full menu (rendered from data/menu.json) -->
-    <section class="section menu" id="menu" aria-labelledby="menu-title">
+    <!-- Signature dishes: mezze -->
+    <section class="section mezze" id="mezze" aria-labelledby="mezze-title">
       <div class="container">
-        <header class="section-head section-head-split reveal">
-          <div>
-            <p class="kicker">Menu</p>
-            <h2 id="menu-title">The full menu</h2>
-            <p class="lede">Platters, wraps, grills and mezze. Pick a section, or switch on vegetarian only.</p>
-          </div>
-          <a class="text-link" href="https://www.mimoslounge.co.uk/order" target="_blank" rel="noopener">Order online, 20% off your first order <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span class="vh"> (opens in a new tab)</span></a>
+        <header class="section-head reveal">
+          <p class="kicker"><span class="bulbs" aria-hidden="true"></span>Mezze &amp; small plates</p>
+          <h2 id="mezze-title">Made for the middle of the <em>table</em></h2>
+          <p class="lede">Hot and cold mezze, cooked the way it's cooked at home. Order a few, pass them round, order a few more.</p>
         </header>
-
-        <div class="menu-bar" data-menu-bar hidden>
-          <div class="menu-tabs" role="tablist" aria-label="Menu sections" data-menu-tabs></div>
-          <button class="veg-toggle" type="button" role="switch" aria-checked="false" aria-label="Vegetarian only" data-veg-toggle>
-            <span class="veg-switch" aria-hidden="true"></span>
-            <span>Veg<span class="veg-long">etarian only</span></span>
-          </button>
-        </div>
-
-        <div class="menu-panels" data-menu-panels>
-          <p class="menu-status" data-menu-status>Loading the menu…</p>
-          <noscript><p class="menu-status">The full menu needs JavaScript. You can also see it on <a href="https://www.mimoslounge.co.uk/order">our ordering page</a>.</p></noscript>
-        </div>
-
-        <p class="menu-foot"><abbr class="tag-v" title="Vegetarian">V</abbr> Vegetarian. Allergies or dietary needs? Please tell us before you order and we'll talk you through the menu.</p>
+        <ul class="mezze-grid" role="list">
+          <li class="dish dish-wide reveal">
+            <figure class="dish-photo"><img src="assets/dishes/veg-mezze.jpg" width="1000" height="1542" loading="lazy" decoding="async" style="object-position: 50% 40%" alt="Vegetarian mezze with vine leaves, green beans, falafel, fatayer, hoummos and pomegranate"></figure>
+            <div class="dish-body">
+              <p class="dish-kicker">Platter</p>
+              <h3 class="dish-name">Vegetarian Selection of Mezze <abbr class="tag-v" title="Vegetarian">V</abbr></h3>
+              <p class="dish-desc">Seven mezze on one platter: hoummos, moutabbal, tabbouleh, okra, loubieh bel zeit, fatayer &amp; falafel.</p>
+              <p class="dish-price">£16</p>
+            </div>
+          </li>
+          <li class="dish reveal">
+            <figure class="dish-photo"><img src="assets/dishes/fatayer.jpg" width="1000" height="996" loading="lazy" decoding="async" alt="Four fatayer pastries with a slice of lemon on a black plate"></figure>
+            <div class="dish-body">
+              <h3 class="dish-name">Fatayer <abbr class="tag-v" title="Vegetarian">V</abbr></h3>
+              <p class="dish-desc">Four baked pastries filled with spinach, onion &amp; pine kernels.</p>
+              <p class="dish-price">£8</p>
+            </div>
+          </li>
+          <li class="dish reveal">
+            <figure class="dish-photo"><img src="assets/dishes/falafel.jpg" width="1000" height="581" loading="lazy" decoding="async" style="object-position: 30% 50%" alt="Sesame-crusted falafel with salad and pickles, and a bowl of tahini"></figure>
+            <div class="dish-body">
+              <h3 class="dish-name">Falafel <abbr class="tag-v" title="Vegetarian">V</abbr></h3>
+              <p class="dish-desc">Bean &amp; chickpea croquettes with garlic, spices &amp; sesame.</p>
+              <p class="dish-price">£6.99</p>
+            </div>
+          </li>
+          <li class="dish reveal">
+            <figure class="dish-photo"><img src="assets/dishes/jawaneh.jpg" width="1000" height="1333" loading="lazy" decoding="async" alt="Grilled chicken wings with lettuce, tomato, lemon and garlic sauce"></figure>
+            <div class="dish-body">
+              <h3 class="dish-name">Jawaneh</h3>
+              <p class="dish-desc">Chicken wings in lemon &amp; garlic, charcoal grilled or fried.</p>
+              <p class="dish-price">£6.75</p>
+            </div>
+          </li>
+          <li class="dish reveal">
+            <figure class="dish-photo"><img src="assets/dishes/arayess.jpg" width="1000" height="1333" loading="lazy" decoding="async" alt="Arayess: grilled Lebanese bread stuffed with minced lamb, with pickles and salad"></figure>
+            <div class="dish-body">
+              <h3 class="dish-name">Arayess</h3>
+              <p class="dish-desc">Lebanese bread filled with minced lamb &amp; pine kernels, charcoal grilled.</p>
+              <p class="dish-price">£9.75</p>
+            </div>
+          </li>
+          <li class="dish reveal">
+            <figure class="dish-photo"><img src="assets/dishes/spicy-potatoes.jpg" width="1000" height="1333" loading="lazy" decoding="async" style="object-position: 50% 70%" alt="Spicy potatoes with coriander, chilli and a wedge of lemon"></figure>
+            <div class="dish-body">
+              <h3 class="dish-name">Spicy Potatoes <abbr class="tag-v" title="Vegetarian">V</abbr></h3>
+              <p class="dish-desc">Diced potatoes with peppers, coriander, garlic &amp; spices.</p>
+              <p class="dish-price">£6.75</p>
+            </div>
+          </li>
+          <li class="dish reveal">
+            <figure class="dish-photo"><img src="assets/dishes/grilled-halloumi.jpg" width="1000" height="1333" loading="lazy" decoding="async" alt="Grilled halloumi with cucumber, tomato and mint"></figure>
+            <div class="dish-body">
+              <h3 class="dish-name">Grilled Halloumi <abbr class="tag-v" title="Vegetarian">V</abbr></h3>
+              <p class="dish-desc">Slices of halloumi, grilled &amp; sprinkled with sesame.</p>
+              <p class="dish-price">£8</p>
+            </div>
+          </li>
+          <li class="dish-more reveal">
+            <a href="#menu">
+              <span class="dish-more-num" data-dish-count>71</span>
+              <span class="dish-more-text">dishes on the full menu</span>
+              <span class="dish-more-link">See the menu <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- 5. The Bar / Lounge -->
+    <!-- Full menu (rendered from data/menu.json) -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="menu-card">
+          <header class="menu-head reveal">
+            <div>
+              <p class="kicker">The menu</p>
+              <h2 id="menu-title">Everything we <em>cook</em></h2>
+              <p class="lede">With allergens on every dish. Pick a section, or switch on vegetarian only.</p>
+            </div>
+            <a class="text-link" href="https://www.mimoslounge.co.uk/order" target="_blank" rel="noopener">Order online, 20% off your first order <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span class="vh"> (opens in a new tab)</span></a>
+          </header>
+
+          <div class="menu-bar" data-menu-bar hidden>
+            <div class="menu-tabs" role="tablist" aria-label="Menu sections" data-menu-tabs></div>
+            <button class="veg-toggle" type="button" role="switch" aria-checked="false" aria-label="Vegetarian only" data-veg-toggle>
+              <span class="veg-switch" aria-hidden="true"></span>
+              <span>Veg<span class="veg-long">etarian only</span></span>
+            </button>
+          </div>
+
+          <div class="menu-panels" data-menu-panels>
+            <p class="menu-status" data-menu-status>Loading the menu…</p>
+            <noscript><p class="menu-status">The full menu needs JavaScript. You can also see it on <a href="https://www.mimoslounge.co.uk/order">our ordering page</a>.</p></noscript>
+          </div>
+
+          <p class="menu-foot"><abbr class="tag-v" title="Vegetarian">V</abbr> Vegetarian. Allergies or dietary needs? Please tell us before you order and we'll talk you through the menu.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Lounge Bar -->
     <section class="bar" id="bar" aria-labelledby="bar-title">
       <div class="container">
-        <header class="section-head reveal">
-          <p class="kicker kicker-ember">The Lounge Bar</p>
-          <h2 id="bar-title">Stay for a drink</h2>
-          <p class="lede">There's a bar at Mimo's too. Lebanese wine and beer, fresh juices, mint lemonade and a list of 22 cocktails. Come for dinner and stay on, or start in the lounge.</p>
-        </header>
+        <div class="bar-intro">
+          <figure class="bar-photo reveal">
+            <img src="assets/hero.jpg" srcset="assets/hero-1000.jpg 1000w, assets/hero.jpg 2000w" sizes="(min-width: 960px) 45vw, 100vw" width="2000" height="1500" loading="lazy" decoding="async" alt="The bar at Mimo's: bottle shelves, warm string lights and bar stools">
+          </figure>
+          <div class="bar-copy reveal">
+            <p class="kicker"><span class="bulbs" aria-hidden="true"></span>The Lounge Bar</p>
+            <h2 id="bar-title">Stay for a <em>drink</em></h2>
+            <p class="lede">Mimo's is a lounge bar as well as a grill. Lebanese wine from Château Ksara, Château Musar and Massaya, cold Beirut and 961, fresh juices and a list of 22 cocktails.</p>
+            <ul class="bar-facts" role="list">
+              <!-- TODO: "best in London" summarises their reviews; quote the review or confirm with owner. -->
+              <li><strong>Fresh mint lemonade</strong><span>Guests call it the best in London.</span><em>£4.80</em></li>
+              <li><strong>22 cocktails</strong><span>Old Fashioned to Pomegranate Martini.</span><em>£9.99</em></li>
+              <li><strong>Lebanese beer</strong><span>Beirut, or 961 Lager.</span><em>from £4.50</em></li>
+              <li><strong>Lebanese coffee</strong><span>Or white Lebanese coffee with orange blossom.</span><em>from £2.75</em></li>
+            </ul>
+          </div>
+        </div>
 
-        <ul class="bar-tiles" role="list">
-          <li class="tile tile-wine reveal">
-            <p class="tile-kicker">Wine</p>
-            <h3>Lebanese wine</h3>
-            <p>Red, white and rosé from Lebanon.</p>
-            <div class="wine-bottles" data-wine-bottles hidden></div>
-          </li>
-          <li class="tile tile-lemonade reveal">
-            <p class="tile-kicker">House favourite</p>
-            <h3>Fresh mint lemonade</h3>
-            <p>Our guests keep calling it the best in London. Try it and tell us.</p>
-          </li>
-          <li class="tile tile-cocktails reveal">
-            <p class="tile-num" data-cocktail-count>22</p>
-            <h3>cocktails</h3>
-            <p>On the list and ready when you are.</p>
-          </li>
-          <li class="tile reveal">
-            <p class="tile-kicker">Beer</p>
-            <h3>Lebanese beer</h3>
-            <p>Beirut and 961, cold from the fridge.</p>
-          </li>
-          <li class="tile reveal">
-            <p class="tile-kicker">Fresh</p>
-            <h3>Fresh juices</h3>
-            <p>For the table, or for whoever's driving.</p>
-          </li>
-          <li class="tile reveal">
-            <p class="tile-kicker">To finish</p>
-            <h3>Lebanese coffee</h3>
-            <p>With baklawa, maamoul or knafeh from the dessert menu.</p>
-          </li>
-        </ul>
+        <div class="wine reveal">
+          <div class="wine-head">
+            <p class="kicker">Lebanese wine</p>
+            <h3>Fourteen bottles from the Bekaa and beyond</h3>
+            <p>House wine from £5.20 a glass, £19.95 a bottle.</p>
+          </div>
+          <div class="wine-list" data-wine-list></div>
+        </div>
 
         <div class="drinks reveal">
-          <h3 class="drinks-title">The drinks list</h3>
+          <h3 class="drinks-title">The full drinks list</h3>
           <div class="drinks-list" data-drinks></div>
         </div>
       </div>
     </section>
 
-    <!-- 6. Groups & occasions -->
+    <!-- Groups & occasions -->
     <section class="section groups" id="groups" aria-labelledby="groups-title">
       <div class="container groups-grid">
+        <figure class="groups-photo reveal">
+          <img src="assets/gallery/gallery-5.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="Mezze in terracotta bowls: hoummos, moutabbal, labneh, olives and stuffed pastries">
+        </figure>
         <div class="groups-copy reveal">
-          <p class="kicker">Groups &amp; occasions</p>
-          <h2 id="groups-title">Bring the whole family</h2>
-          <p class="lede">Lebanese food is made for a full table. Order platters and mezze for everyone, a mixed grill for the middle, and let us look after the rest. We're used to big groups.</p>
+          <p class="kicker"><span class="bulbs" aria-hidden="true"></span>Groups &amp; occasions</p>
+          <h2 id="groups-title">Bring the whole <em>family</em></h2>
+          <p class="lede">Lebanese food is made for a full table. Start with a Large Selection of Mezze, put a Mixed Grill in the middle and keep ordering. Guests tell us it feels like a family gathering, and we're used to hosting big groups.</p>
+          <ul class="features" role="list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><div><strong>Big groups welcome</strong><span>Book online, or call us for larger tables.</span></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-platter"/></svg><div><strong>Sharing platters</strong><span>Large Selection of Mezze £16.50. Mixed Grill with hoummos &amp; tabbouleh £20.</span></div></li>
+            <!-- TODO: confirm with owner. Outdoor seating, wheelchair access and dog-friendly come from their TableAgent listing, not their own site. -->
+            <li data-todo="confirm-with-owner"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg><div><strong>Outdoor seating</strong><span>A table outside when the weather allows.</span></div></li>
+            <li data-todo="confirm-with-owner"><svg class="icon" aria-hidden="true"><use href="#i-access"/></svg><div><strong>Wheelchair access</strong><span>Let us know when you book.</span></div></li>
+            <li data-todo="confirm-with-owner"><svg class="icon" aria-hidden="true"><use href="#i-paw"/></svg><div><strong>Dog-friendly</strong><span>Well-behaved dogs are welcome.</span></div></li>
+          </ul>
           <div class="groups-ctas">
-            <a class="btn btn-primary" href="https://tableagent.com/london/mimos-lounge-bar-grill/table-search/" target="_blank" rel="noopener">Book a table<span class="vh"> (opens in a new tab)</span></a>
-            <a class="btn btn-outline" href="tel:+442081766928"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 020 8176 6928</a>
+            <a class="btn btn-red" href="https://tableagent.com/london/mimos-lounge-bar-grill/table-search/" target="_blank" rel="noopener">Book a table<span class="vh"> (opens in a new tab)</span></a>
+            <a class="btn btn-ghost" href="tel:+442081766928"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> 020 8176 6928</a>
           </div>
         </div>
-        <ul class="features" role="list">
-          <li class="feature reveal">
-            <svg class="icon feature-icon" aria-hidden="true"><use href="#i-users"/></svg>
-            <div><h3>Big groups welcome</h3><p>Birthdays, family dinners, long tables. Book online or call us for larger parties.</p></div>
-          </li>
-          <li class="feature reveal">
-            <svg class="icon feature-icon" aria-hidden="true"><use href="#i-platter"/></svg>
-            <div><h3>Made for sharing</h3><p>Mezze selections and grill platters that go in the middle of the table.</p></div>
-          </li>
-          <!-- TODO: confirm with owner. Outdoor seating, wheelchair access and dog-friendly are taken from their TableAgent listing, not their own site. -->
-          <li class="feature reveal" data-todo="confirm-with-owner">
-            <svg class="icon feature-icon" aria-hidden="true"><use href="#i-sun"/></svg>
-            <div><h3>Outdoor seating</h3><p>A table outside when the weather plays along.</p></div>
-          </li>
-          <li class="feature reveal" data-todo="confirm-with-owner">
-            <svg class="icon feature-icon" aria-hidden="true"><use href="#i-access"/></svg>
-            <div><h3>Wheelchair access</h3><p>Let us know when you book and we'll sort the right table.</p></div>
-          </li>
-          <li class="feature reveal" data-todo="confirm-with-owner">
-            <svg class="icon feature-icon" aria-hidden="true"><use href="#i-paw"/></svg>
-            <div><h3>Dog-friendly</h3><p>Well-behaved dogs are welcome to join you.</p></div>
-          </li>
-        </ul>
       </div>
     </section>
 
-    <!-- 7. Reviews -->
+    <!-- Reviews -->
     <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
       <div class="container">
-        <header class="section-head reveal">
-          <p class="kicker">Reviews</p>
-          <h2 id="reviews-title">Cooked from the heart</h2>
-          <p class="lede">Guests keep telling us the same things: it tastes like home, it's cooked from the heart, and we look after big groups.</p>
+        <header class="section-head section-head-center reveal">
+          <p class="kicker"><span class="bulbs" aria-hidden="true"></span>Reviews</p>
+          <h2 id="reviews-title">Cooked from the <em>heart</em></h2>
         </header>
         <div class="reviews-grid">
           <div class="rating reveal">
@@ -384,47 +338,42 @@
             <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Mimo%27s+Lounge+Bar+%26+Grill+141+Tooting+High+Street" target="_blank" rel="noopener">Read the reviews <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span class="vh"> (opens in a new tab)</span></a>
           </div>
           <figure class="review review-feature reveal">
-            <blockquote>
-              <p>Great evening- lovely food and staff just amazing. Thank you for hosting our big group. Very authentic and definitely cooked from the heart.</p>
-            </blockquote>
-            <figcaption><strong>Myrna S.</strong><span>Review on TableAgent</span></figcaption>
-          </figure>
-          <!-- TODO: add Barbara's and Kevin's reviews word for word from mimoslounge.co.uk (the site could not be fetched).
-          <figure class="review reveal">
-            <blockquote><p>…</p></blockquote>
-            <figcaption><strong>Barbara</strong><span>Review on mimoslounge.co.uk</span></figcaption>
+            <blockquote><p>The food is delicious, cooked with love, just like my mother in law cooked. Reminded me of family gatherings and happier times. Look forward to our next meal. 😊😊</p></blockquote>
+            <figcaption><strong>Barbara</strong><span>Google review · Food 5/5 · Service 5/5 · Atmosphere 5/5</span></figcaption>
           </figure>
           <figure class="review reveal">
-            <blockquote><p>…</p></blockquote>
-            <figcaption><strong>Kevin</strong><span>Review on mimoslounge.co.uk</span></figcaption>
+            <blockquote><p>Great evening- lovely food and staff just amazing. Thank you for hosting our big group. Very authentic and definitely cooked from the heart.</p></blockquote>
+            <figcaption><strong>Myrna S.</strong><span>TableAgent review</span></figcaption>
           </figure>
-          -->
+          <figure class="review reveal">
+            <blockquote><p>Excellent mezzes and hot food. Great friendly service and nice surroundings. Highly recommended!</p></blockquote>
+            <figcaption><strong>Kevin</strong><span>Google review · Food 5/5 · Service 5/5 · Atmosphere 5/5</span></figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- 8. Gallery. Tiles whose photo is missing are removed; the section hides if none load. -->
-    <!-- TODO: add alt text for each photo once viewed. -->
+    <!-- Gallery -->
     <section class="section gallery" id="gallery" aria-labelledby="gallery-title" data-gallery>
       <div class="container">
         <header class="section-head reveal">
-          <p class="kicker">Gallery</p>
-          <h2 id="gallery-title">Take a look around</h2>
+          <p class="kicker"><span class="bulbs" aria-hidden="true"></span>Gallery</p>
+          <h2 id="gallery-title">Take a <em>look</em></h2>
         </header>
         <ul class="gallery-grid" role="list">
-          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-1.jpg"><img src="assets/gallery/gallery-1-700.jpg" alt="" loading="lazy" decoding="async"><span class="vh">Open photo 1</span></button></li>
-          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-2.jpg"><img src="assets/gallery/gallery-2-700.jpg" alt="" loading="lazy" decoding="async"><span class="vh">Open photo 2</span></button></li>
-          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-3.jpg"><img src="assets/gallery/gallery-3-700.jpg" alt="" loading="lazy" decoding="async"><span class="vh">Open photo 3</span></button></li>
-          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-4.jpg"><img src="assets/gallery/gallery-4-700.jpg" alt="" loading="lazy" decoding="async"><span class="vh">Open photo 4</span></button></li>
-          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-5.jpg"><img src="assets/gallery/gallery-5-700.jpg" alt="" loading="lazy" decoding="async"><span class="vh">Open photo 5</span></button></li>
-          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-6.jpg"><img src="assets/gallery/gallery-6-700.jpg" alt="" loading="lazy" decoding="async"><span class="vh">Open photo 6</span></button></li>
-          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-7.jpg"><img src="assets/gallery/gallery-7-700.jpg" alt="" loading="lazy" decoding="async"><span class="vh">Open photo 7</span></button></li>
+          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-1.jpg"><img src="assets/gallery/gallery-1-700.jpg" width="700" height="467" loading="lazy" decoding="async" alt="Lamb shawarma in pitta with tahini, pickled peppers and grilled tomato"></button></li>
+          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-2.jpg"><img src="assets/gallery/gallery-2-700.jpg" width="700" height="1050" loading="lazy" decoding="async" alt="Bamieh: okra and lamb stew with saffron rice"></button></li>
+          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-3.jpg"><img src="assets/gallery/gallery-3-700.jpg" width="700" height="467" loading="lazy" decoding="async" alt="A Lebanese spread: kafta skewers, tabbouleh, pastries, olives and dips"></button></li>
+          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-4.jpg"><img src="assets/gallery/gallery-4-700.jpg" width="700" height="467" loading="lazy" decoding="async" alt="Fattoush salad with toasted pitta and sumac"></button></li>
+          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-5.jpg"><img src="assets/gallery/gallery-5-700.jpg" width="700" height="467" loading="lazy" decoding="async" alt="Mezze in terracotta bowls: hoummos, moutabbal, labneh, olives and stuffed pastries"></button></li>
+          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-6.jpg"><img src="assets/gallery/gallery-6-700.jpg" width="700" height="919" loading="lazy" decoding="async" alt="Shish taouk skewers with spinach, rocket and cucumber"></button></li>
+          <li><button class="gallery-item" type="button" data-full="assets/gallery/gallery-7.jpg"><img src="assets/gallery/gallery-7-700.jpg" width="700" height="526" loading="lazy" decoding="async" alt="Shankleesh with mint in a pool of olive oil"></button></li>
         </ul>
       </div>
       <dialog class="lightbox" aria-label="Photo viewer" data-lightbox>
         <figure class="lb-figure">
           <img class="lb-img" alt="" data-lb-img>
-          <figcaption class="lb-count" data-lb-count></figcaption>
+          <figcaption class="lb-caption"><span data-lb-alt></span><span class="lb-count" data-lb-count></span></figcaption>
         </figure>
         <button class="lb-btn lb-close" type="button" data-lb-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
         <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Previous photo"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button>
@@ -432,12 +381,12 @@
       </dialog>
     </section>
 
-    <!-- 9. Visit -->
+    <!-- Visit -->
     <section class="section visit" id="visit" aria-labelledby="visit-title">
       <div class="container visit-grid">
         <div class="visit-info reveal">
-          <p class="kicker">Visit</p>
-          <h2 id="visit-title">Find us on Tooting High Street</h2>
+          <p class="kicker"><span class="bulbs" aria-hidden="true"></span>Visit</p>
+          <h2 id="visit-title">Find us on Tooting <em>High Street</em></h2>
           <address class="visit-address">
             <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
             <span>141 Tooting High Street<br>London SW17 0SY</span>
@@ -445,7 +394,7 @@
           <a class="text-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=141+Tooting+High+Street%2C+London+SW17+0SY" target="_blank" rel="noopener">Get directions <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span class="vh"> (opens in a new tab)</span></a>
 
           <div class="visit-block">
-            <h3><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Opening hours</h3>
+            <h3>Opening hours</h3>
             <dl class="hours">
               <div><dt>Monday – Sunday</dt><dd>12:00 – 22:00</dd></div>
               <div><dt>Delivery</dt><dd>12:00 – 23:00</dd></div>
@@ -468,16 +417,17 @@
     </section>
   </main>
 
-  <!-- 10. Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <p class="footer-name">Mimo's<small>Lounge · Bar &amp; Grill</small></p>
-          <p>Authentic Lebanese food, cooked from the heart on Tooting High Street.</p>
-          <div class="footer-ctas">
-            <a class="btn btn-primary" href="https://tableagent.com/london/mimos-lounge-bar-grill/table-search/" target="_blank" rel="noopener">Book a table<span class="vh"> (opens in a new tab)</span></a>
-            <a class="btn btn-ember" href="https://www.mimoslounge.co.uk/order" target="_blank" rel="noopener">Order online<span class="vh"> (opens in a new tab)</span></a>
+          <img class="footer-badge" src="assets/logo-badge.webp" width="600" height="599" loading="lazy" alt="Mimo's Lounge, Bar &amp; Grill">
+          <div>
+            <p>Authentic Lebanese food, a charcoal grill and a lounge bar on Tooting High Street.</p>
+            <div class="footer-ctas">
+              <a class="btn btn-red" href="https://tableagent.com/london/mimos-lounge-bar-grill/table-search/" target="_blank" rel="noopener">Book a table<span class="vh"> (opens in a new tab)</span></a>
+              <a class="btn btn-ghost" href="https://www.mimoslounge.co.uk/order" target="_blank" rel="noopener">Order online<span class="vh"> (opens in a new tab)</span></a>
+            </div>
           </div>
         </div>
         <div class="footer-col">
@@ -500,10 +450,9 @@
     </div>
   </footer>
 
-  <!-- Mobile: sticky bottom bar with both CTAs -->
   <div class="cta-bar" role="region" aria-label="Book or order">
-    <a class="btn btn-outline-light" href="https://www.mimoslounge.co.uk/order" target="_blank" rel="noopener">Order online<span class="vh"> (opens in a new tab)</span></a>
-    <a class="btn btn-primary" href="https://tableagent.com/london/mimos-lounge-bar-grill/table-search/" target="_blank" rel="noopener">Book a table<span class="vh"> (opens in a new tab)</span></a>
+    <a class="btn btn-ghost" href="https://www.mimoslounge.co.uk/order" target="_blank" rel="noopener">Order online<span class="vh"> (opens in a new tab)</span></a>
+    <a class="btn btn-red" href="https://tableagent.com/london/mimos-lounge-bar-grill/table-search/" target="_blank" rel="noopener">Book a table<span class="vh"> (opens in a new tab)</span></a>
   </div>
 </body>
 </html>

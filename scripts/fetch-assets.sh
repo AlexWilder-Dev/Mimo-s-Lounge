@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Downloads the venue's logo and photos (from the image CDN behind their current site) into assets/.
-# Also pulls smaller copies of the hero and gallery photos for phones and thumbnails.
+# Also pulls smaller copies of the hero and gallery photos for phones and thumbnails,
+# and derives the web logo files with scripts/make-logo.py.
 # Usage: ./scripts/fetch-assets.sh   (from anywhere)
 set -uo pipefail
 
@@ -20,7 +21,17 @@ get() { # get <cdn path + query> <destination>
   fi
 }
 
-get "YlBiHS4JHW2PoOl8uNX0V5Nuw.png?h=400" assets/logo.png
+# The logo is served as a JPEG on a white background despite the .png name.
+get "YlBiHS4JHW2PoOl8uNX0V5Nuw.png?h=400" assets/logo.jpg
+# A larger copy to cut the transparent badge and the cream wordmark from (needs Pillow).
+source="$(mktemp)"
+if curl -fsSL --retry 2 "$CDN/YlBiHS4JHW2PoOl8uNX0V5Nuw.png?h=1600" -o "$source" && python3 scripts/make-logo.py "$source"; then
+  echo "ok      logo badge, wordmark and icons"
+else
+  echo "FAILED  logo badge and wordmark (run scripts/make-logo.py by hand)" >&2
+  failed=1
+fi
+rm -f "$source"
 get "GsPB0BPVjKpGl1ym2mIQ5y4OArY.jpg?w=2000" assets/hero.jpg
 get "GsPB0BPVjKpGl1ym2mIQ5y4OArY.jpg?w=1000" assets/hero-1000.jpg
 
@@ -39,7 +50,7 @@ for i in "${!gallery[@]}"; do
   get "${gallery[$i]}.jpg?w=700" "assets/gallery/gallery-$n-700.jpg"
 done
 
-# The last four mappings were inferred from page order on their site. Check them by eye.
+# All ten mappings checked by eye against the photos.
 while read -r name id; do
   get "$id.jpg?w=1000" "assets/dishes/$name.jpg"
 done <<'EOF'
