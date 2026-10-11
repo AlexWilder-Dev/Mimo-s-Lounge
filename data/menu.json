@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "venue": "Mimo's Lounge, Bar & Grill",
+    "source": "fallback",
+    "sourceNote": "Built from the fallback list in the project brief because the Flipdish menu JSON could not be fetched. Run scripts/fetch-menu.py to replace this file with their full menu.",
+    "currency": "GBP",
+    "updated": "2026-10-11",
+    "todo": [
+      "Item descriptions and allergen notes are not in the fallback list.",
+      "Drinks: wine bottle names, the 22 cocktail names, fresh juice names and all drink prices are not in the fallback list."
+    ]
+  },
+  "food": [
+    {
+      "id": "platters",
+      "name": "Platters",
+      "note": null,
+      "items": [
+        { "name": "Selection of Mezze", "veg": true, "prices": [{ "label": null, "amount": 14 }] },
+        { "name": "Large Selection of Mezze", "veg": false, "prices": [{ "label": null, "amount": 16.5 }] },
+        { "name": "Vegetarian Selection of Mezze", "veg": true, "prices": [{ "label": null, "amount": 16 }] },
+        { "name": "Charcoal Grilled Lamb", "veg": false, "note": "With hoummos or salad", "prices": [{ "label": null, "amount": 18.5 }] },
+        { "name": "Shish Taouk", "veg": false, "note": "With salad", "prices": [{ "label": null, "amount": 15.99 }] },
+        { "name": "Grilled Kafta", "veg": false, "note": "With fattoush", "prices": [{ "label": null, "amount": 17.99 }] },
+        { "name": "Mixed Grill", "veg": false, "note": "With hoummos & tabbouleh", "prices": [{ "label": null, "amount": 20 }] }
+      ]
+    },
+    {
+      "id": "mains",
+      "name": "Mains",
+      "note": null,
+      "items": [
+        { "name": "Loubieh with Rice", "veg": true, "prices": [{ "label": null, "amount": 15.5 }] },
+        { "name": "Bamieh with Rice", "veg": true, "prices": [{ "label": null, "amount": 15.5 }] },
+        { "name": "Loubieh with Lamb & Rice", "veg": false, "prices": [{ "label": null, "amount": 17.5 }] },
+        { "name": "Bamieh with Lamb & Rice", "veg": false, "prices": [{ "label": null, "amount": 17.5 }] }
+      ]
+    },
+    {
+      "id": "wraps",
+      "name": "Wraps",
+      "note": "Make any wrap a meal for £10.99, with fries or salad and a soft drink.",
+      "items": [
+        { "name": "Lahm Meshwi", "veg": false, "prices": [{ "label": "Regular", "amount": 8.75 }, { "label": "Meal", "amount": 10.99 }] },
+        { "name": "Kafta Meshwiyeh", "veg": false, "prices": [{ "label": "Regular", "amount": 7.5 }, { "label": "Meal", "amount": 10.99 }] },
+        { "name": "Shish Taouk", "veg": false, "prices": [{ "label": "Regular", "amount": 7.5 }, { "label": "Meal", "amount": 10.99 }] },
+        { "name": "Falafel", "veg": true, "prices": [{ "label": "Regular", "amount": 7 }, { "label": "Meal", "amount": 10.99 }] },
+        { "name": "Spicy Potatoes", "veg": true, "prices": [{ "label": "Regular", "amount": 7 }, { "label": "Meal", "amount": 10.99 }] },
+        { "name": "Shankleesh", "veg": true, "prices": [{ "label": "Regular", "amount": 6 }, { "label": "Meal", "amount": 10.99 }] },
+        { "name": "Labneh", "veg": true, "prices": [{ "label": "Regular", "amount": 6 }, { "label": "Meal", "amount": 10.99 }] },
+        { "name": "Grilled Halloumi", "veg": true, "prices": [{ "label": "Regular", "amount": 6.5 }, { "label": "Meal", "amount": 10.99 }] }
+      ]
+    },
+    {
+      "id": "bbq",
+      "name": "BBQ",
+      "note": "Served with chips & salad or rice & salad.",
+      "items": [
+        { "name": "Lahm Meshwi", "veg": false, "prices": [{ "label": null, "amount": 19.5 }] },
+        { "name": "Kafta Meshwiyeh", "veg": false, "prices": [{ "label": null, "amount": 16.5 }] },
+        { "name": "Shish Taouk", "veg": false, "prices": [{ "label": null, "amount": 15.99 }] },
+        { "name": "Kafta Tarator", "veg": false, "prices": [{ "label": null, "amount": 17.25 }] },
+        { "name": "Kafta Khashkhash", "veg": false, "prices": [{ "label": null, "amount": 17.25 }] },
+        { "name": "Mixed Grill", "veg": false, "prices": [{ "label": null, "amount": 19.5 }] },
+        { "name": "Chicken Chawarma", "veg": false, "prices": [{ "label": null, "amount": 15.75 }] },
+        { "name": "Farrouj Meshwi", "veg": false, "prices": [{ "label": null, "amount": 17.5 }] },
+        { "name": "Chicken Shawarma Combo", "veg": false, "prices": [{ "label": null, "amount": 17 }] }
+      ]
+    },
+    {
+      "id": "hot-mezze",
+      "name": "Hot Mezze",
+      "note": null,
+      "items": [
+        { "name": "Foul Moudammas", "veg": true, "prices": [{ "label": null, "amount": 6.75 }] },
+        { "name": "Fatayer", "veg": true, "prices": [{ "label": null, "amount": 8 }] },
+        { "name": "Samboussik", "veg": false, "prices": [{ "label": null, "amount": 8 }] },
+        { "name": "Cheese Samboussik", "veg": true, "prices": [{ "label": null, "amount": 8 }] },
+        { "name": "Kebbeh", "veg": false, "prices": [{ "label": null, "amount": 8.5 }] },
+        { "name": "Cheese Rikakat", "veg": true, "prices": [{ "label": null, "amount": 8 }] },
+        { "name": "Falafel", "veg": true, "prices": [{ "label": null, "amount": 6.99 }] },
+        { "name": "Jawaneh", "veg": false, "prices": [{ "label": null, "amount": 6.75 }] },
+        { "name": "Halloumi Grilled Kellaj", "veg": true, "prices": [{ "label": null, "amount": 8.75 }] },
+        { "name": "Arayess", "veg": false, "prices": [{ "label": null, "amount": 9.75 }] },
+        { "name": "Spicy Potatoes", "veg": true, "prices": [{ "label": null, "amount": 6.75 }] },
+        { "name": "Kellaj Shankleesh", "veg": true, "prices": [{ "label": null, "amount": 9.75 }] },
+        { "name": "Grilled Halloumi", "veg": true, "prices": [{ "label": null, "amount": 8 }] }
+      ]
+    },
+    {
+      "id": "cold-mezze",
+      "name": "Cold Mezze",
+      "note": null,
+      "items": [
+        { "name": "Hoummos", "veg": true, "prices": [{ "label": null, "amount": 6.75 }] },
+        { "name": "Hoummos Beiruty", "veg": true, "prices": [{ "label": null, "amount": 8 }] },
+        { "name": "Loubieh Bel Zeit", "veg": true, "prices": [{ "label": null, "amount": 7.5 }] },
+        { "name": "Bamieh Bel Zeit", "veg": true, "prices": [{ "label": null, "amount": 7.5 }] },
+        { "name": "Shankleesh", "veg": true, "prices": [{ "label": null, "amount": 8.25 }] },
+        { "name": "Labneh", "veg": true, "prices": [{ "label": null, "amount": 7.75 }] },
+        { "name": "Tabbouleh", "veg": true, "prices": [{ "label": null, "amount": 8.25 }] },
+        { "name": "Moutabbal", "veg": true, "prices": [{ "label": null, "amount": 8 }] },
+        { "name": "Hoummos Awarma", "veg": false, "prices": [{ "label": null, "amount": 9.75 }] },
+        { "name": "Hoummos Chawarma Chicken", "veg": false, "prices": [{ "label": null, "amount": 9.5 }] },
+        { "name": "Batinhan Makdous", "veg": true, "prices": [{ "label": null, "amount": 6.75 }] },
+        { "name": "Kabis", "veg": true, "prices": [{ "label": null, "amount": 6.5 }] }
+      ]
+    },
+    {
+      "id": "salad",
+      "name": "Salad",
+      "note": null,
+      "items": [
+        { "name": "Mimo's Fresh Salad", "veg": true, "prices": [{ "label": null, "amount": 6 }] },
+        { "name": "Fattoush", "veg": true, "prices": [{ "label": null, "amount": 7 }] },
+        { "name": "Lebanese Salad", "veg": true, "prices": [{ "label": null, "amount": 6.5 }] },
+        { "name": "Spicy Lebanese Salad", "veg": false, "prices": [{ "label": null, "amount": 6.75 }] },
+        { "name": "Tomato & Onion", "veg": true, "prices": [{ "label": null, "amount": 5.5 }] },
+        { "name": "Rocket", "veg": true, "prices": [{ "label": null, "amount": 6.25 }] }
+      ]
+    },
+    {
+      "id": "soup",
+      "name": "Soup",
+      "note": null,
+      "items": [
+        { "name": "Lentil", "veg": true, "prices": [{ "label": null, "amount": 6.5 }] },
+        { "name": "Chicken", "veg": false, "prices": [{ "label": null, "amount": 6.75 }] }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Sides",
+      "note": null,
+      "items": [
+        { "name": "Plain Rice", "veg": false, "prices": [{ "label": null, "amount": 5.75 }] },
+        { "name": "Vermicelli Rice", "veg": false, "prices": [{ "label": null, "amount": 6 }] },
+        { "name": "French Fries", "veg": false, "prices": [{ "label": null, "amount": 4.5 }] }
+      ]
+    },
+    {
+      "id": "dessert",
+      "name": "Dessert",
+      "note": null,
+      "items": [
+        { "name": "Baklawa", "veg": false, "note": "6 pieces", "prices": [{ "label": null, "amount": 6.5 }] },
+        { "name": "Maamoul", "veg": false, "prices": [{ "label": null, "amount": 7 }] },
+        { "name": "Knafeh Bel Jebn", "veg": false, "prices": [{ "label": null, "amount": 8 }] },
+        { "name": "Fruit Platter", "veg": false, "prices": [{ "label": null, "amount": 6.75 }] }
+      ]
+    }
+  ],
+  "drinks": [
+    {
+      "id": "wine",
+      "name": "Lebanese wine",
+      "note": null,
+      "groups": [
+        { "name": "Red", "items": [] },
+        { "name": "White", "items": [] },
+        { "name": "Rosé", "items": [] }
+      ],
+      "items": []
+    },
+    {
+      "id": "beer",
+      "name": "Lebanese beer",
+      "note": null,
+      "items": [
+        { "name": "Beirut", "prices": [] },
+        { "name": "961", "prices": [] }
+      ]
+    },
+    {
+      "id": "cocktails",
+      "name": "Cocktails",
+      "note": null,
+      "count": 22,
+      "items": []
+    },
+    {
+      "id": "fresh",
+      "name": "Fresh juices & lemonade",
+      "note": null,
+      "items": [
+        { "name": "Fresh mint lemonade", "prices": [] }
+      ]
+    },
+    {
+      "id": "hot-drinks",
+      "name": "Hot drinks",
+      "note": null,
+      "items": [
+        { "name": "Lebanese coffee", "prices": [] }
+      ]
+    }
+  ]
+}
